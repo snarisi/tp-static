@@ -1,0 +1,5 @@
+body h1 {
+  color: orange; }
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  color: skyblue; }
