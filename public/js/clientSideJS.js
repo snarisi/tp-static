@@ -4,7 +4,7 @@ function initialize_gmaps() {
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
-        zoom: 16,
+        zoom: 14,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     // get the maps div's HTML obj
@@ -22,4 +22,10 @@ function initialize_gmaps() {
 
 $(document).ready(function() {
     initialize_gmaps();
+    $('button').on('click', function(event) {
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
+        console.log('event fired');
+    })
+    $('.glyphicon-plus-sign').addClass('topify');
 });
