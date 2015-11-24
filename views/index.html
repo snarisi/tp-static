@@ -2,34 +2,64 @@
 
 {% block content %}
 <div id='menuMap'>
-	<div id='dropDownBox'>
+	<div id='dropDownBox' class='sideBox'>
 		<span>Hotel:</span>
 		<br>
-		<select>
-		{% for Hotel in Hotels %}
-			<option value="{{Hotel.name}}">{{Hotel.name}}</option>
-		{% endfor %}
-		</select>
+		<span class='fancySelect'>
+			<select>
+			{% for Hotel in Hotels %}
+				<option value="{{Hotel.name}}">{{Hotel.name}}</option>
+			{% endfor %}
+			</select>
+		<span class="glyphicon glyphicon-plus-sign plusBTN"></span>
+		</span>
 		<br>
 		<span>Activity:</span>
 		<br>
-		<select>
-		{% for Activity in Activities %}
-			<option value="{{Activity.name}}">{{Activity.name}}</option>
-		{% endfor %}
-		</select>
+		<span class='fancySelect'>
+			<select>
+			{% for Activity in Activities %}
+				<option value="{{Activity.name}}">{{Activity.name}}</option>
+			{% endfor %}
+			</select>
+		<span class="glyphicon glyphicon-plus-sign plusBTN">
+		</span>
+		</span>
 		<br>
 		<span>Restaurant:</span>
 		<br>
-		<select>
-		{% for Restaurant in Restaurants %}
-			<option value="{{Restaurant.name}}">{{Restaurant.name}}</option>
-		{% endfor %}
-		</select>
+		<span class='fancySelect'>
+			<select>
+			{% for Restaurant in Restaurants %}
+				<option value="{{Restaurant.name}}">{{Restaurant.name}}</option>
+			{% endfor %}
+			</select>
+		<span class="glyphicon glyphicon-plus-sign plusBTN"></span>
+		</span>
 	</div>
 
 	<div id='map'></div>
 </div>
-<h1>All good!</h1>
+
+<div id='itinerary' class='sideBox'>
+	<ul class="nav navbar-nav numbersAndStuff text-center">
+		<li><button class='btn btn-primary number'>1</button></li> 
+		<li><button class='btn btn-primary number'>2</button></li>
+		<li><button class='btn btn-primary number'>3</button></li> 
+		<li><button class='btn btn-primary number'>+</button></li>
+	</ul>
+	<hr>
+	<div id='dailyData'>
+		<p class='title'>My Hotel</p>
+		<p class='entry'>Waldorf-Astoria</p>
+		<span class="glyphicon glyphicon-remove-sign"></span>
+		<p class='title'>My Restaurants</p>
+		<p class='entry'>Bananwich Truck</p>
+		<span class="glyphicon glyphicon-remove-sign"></span>
+		<p class='title'>My Activities</p>
+		<p class='entry'>Eat World-Famous Bananwich</p>
+		<span class="glyphicon glyphicon-remove-sign"></span>
+	</div>
+</div>
 
 {% endblock %}

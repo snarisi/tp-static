@@ -5,7 +5,7 @@ body {
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-  color: skyblue;
+  color: rgba(135, 206, 250, 1);;
 }
 
 .navbar-inverse {
@@ -15,28 +15,121 @@ body {
 * {
 	box-sizing: border-box;
 }
+
 #map {
 	/*Increase to 100 when done*/
-	height: 80vh;
-	width: 80vw;
+	height: 100vh;
+	width: 100vw;
 }
 
 #menuMap {
 	position: relative;
 }
-#dropDownBox {
-	position: absolute;
-	top: 30%;
-	right: 0px;
-	z-index: 2;
+
+.sideBox {
 	background-color: rgba(0,0,0,.5);
 	font-size: 20px;
+	padding: 5px;
+	border-radius: 5px;
+	width: 340px;
+	margin: 0px auto;
+	text-align: left;
+}
+
+#dropDownBox {
+	position: absolute;
+	top: 20%;
+	right: 0px;
+	z-index: 2;
 	span {
 		color: rgba(135, 206, 250, .75);
 	}
 	select {
 		font-color: orange;
 	}
-	padding: 5px;
-	border-radius: 5px;
+}
+
+.plusBTN {
+	top: 5px!important;
+	-webkit-text-stroke-width: 1px!important;
+	-webkit-text-stroke-color: rgba(255, 127, 53, .75)!important;
+}
+
+.fancySelect {
+	font-size: inherit;
+ /*   padding: .5em;*/
+    margin: 0;
+    select {
+    	width: 90%;
+    	font-size: 14px;
+	    background-color: rgba(255, 127, 53, .5);
+	    color: rgba(135, 206, 250, 1);
+	}
+}
+
+.numbersAndStuff {
+	width: 100%;
+	float: none;
+	li {
+		padding: auto;
+		width: 25%;
+		text-align: center;
+		color: rgba(135, 206, 250, .75);
+		.number {
+			color: rgba(135, 206, 250, .75);
+			background-color: rgba(0,0,0,0);
+			border-radius: 50%;
+			border: rgba(135, 206, 250, .75) solid 2px;
+		}
+	}
+}
+
+#itinerary {
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	z-index: 2;
+}
+
+.selected {
+	background-color: rgba(255, 127, 53, .5)!important;
+}
+
+button:focus, button:active {
+	outline: none!important;
+}
+
+button:hover {
+	color: white!important;
+	border-color: white!important;
+}
+
+#dailyData {
+	color: rgba(135, 206, 250, .75);
+}
+
+.title {
+	margin-bottom: 0;
+	clear: both;
+}
+.entry {
+	float: left;
+	font-size: 14px;
+	margin: 0 0 0 10px;
+	color: rgba(255,255,255,.75);
+}
+#dailyData {
+	span {
+		float: right;
+		text-align: right;
+		color: rgba(255, 127, 53, .75);
+		-webkit-text-stroke-width: .5px;
+   		-webkit-text-stroke-color: rgba(135, 206, 250, .75);
+   		right: 8px;
+	}
+}
+
+hr {
+	margin: 5px 0;
+	border-color: rgba(135, 206, 250, .75);
 }
