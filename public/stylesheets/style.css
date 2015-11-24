@@ -3,3 +3,32 @@ body h1 {
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
   color: skyblue; }
+
+.navbar-inverse {
+  margin: 0;
+  border-radius: 0px; }
+
+* {
+  box-sizing: border-box; }
+
+#map {
+  /*Increase to 100 when done*/
+  height: 80vh;
+  width: 80vw; }
+
+#menuMap {
+  position: relative; }
+
+#dropDownBox {
+  position: absolute;
+  top: 30%;
+  right: 0px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px; }
+  #dropDownBox span {
+    color: rgba(135, 206, 250, 0.75); }
+  #dropDownBox select {
+    font-color: orange; }

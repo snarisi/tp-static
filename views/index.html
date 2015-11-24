@@ -1,24 +1,35 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div id='menuMap'>
+	<div id='dropDownBox'>
+		<span>Hotel:</span>
+		<br>
+		<select>
+		{% for Hotel in Hotels %}
+			<option value="{{Hotel.name}}">{{Hotel.name}}</option>
+		{% endfor %}
+		</select>
+		<br>
+		<span>Activity:</span>
+		<br>
+		<select>
+		{% for Activity in Activities %}
+			<option value="{{Activity.name}}">{{Activity.name}}</option>
+		{% endfor %}
+		</select>
+		<br>
+		<span>Restaurant:</span>
+		<br>
+		<select>
+		{% for Restaurant in Restaurants %}
+			<option value="{{Restaurant.name}}">{{Restaurant.name}}</option>
+		{% endfor %}
+		</select>
+	</div>
+
+	<div id='map'></div>
+</div>
 <h1>All good!</h1>
-
-Hotel: <select>
-{% for Hotel in Hotels %}
-<option value="{{Hotel.name}}">{{Hotel.name}}</option>
-{% endfor %}
-</select>
-
-Activity: <select>
-{% for Activity in Activities %}
-<option value="{{Activity.name}}">{{Activity.name}}</option>
-{% endfor %}
-</select>
-
-Restaurant: <select>
-{% for Restaurant in Restaurants %}
-<option value="{{Restaurant.name}}">{{Restaurant.name}}</option>
-{% endfor %}
-</select>
 
 {% endblock %}
